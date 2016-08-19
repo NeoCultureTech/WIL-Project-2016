@@ -1,0 +1,10 @@
+c:\users\kohl\documents\visual studio 2013\Projects\Email\Email\bin\Debug\Email.exe.config
+c:\users\kohl\documents\visual studio 2013\Projects\Email\Email\bin\Debug\Email.exe
+c:\users\kohl\documents\visual studio 2013\Projects\Email\Email\bin\Debug\Email.pdb
+c:\users\kohl\documents\visual studio 2013\Projects\Email\Email\obj\Debug\Email.csprojResolveAssemblyReference.cache
+c:\users\kohl\documents\visual studio 2013\Projects\Email\Email\obj\Debug\Email.Properties.Resources.resources
+c:\users\kohl\documents\visual studio 2013\Projects\Email\Email\obj\Debug\Email.csproj.GenerateResource.Cache
+c:\users\kohl\documents\visual studio 2013\Projects\Email\Email\obj\Debug\Email.exe
+c:\users\kohl\documents\visual studio 2013\Projects\Email\Email\obj\Debug\Email.pdb
+c:\users\kohl\documents\visual studio 2013\Projects\Email\Email\obj\Debug\Email.FrmForgotPass.resources
+c:\users\kohl\documents\visual studio 2013\Projects\Email\Email\obj\Debug\Email.FrmLogin.resources

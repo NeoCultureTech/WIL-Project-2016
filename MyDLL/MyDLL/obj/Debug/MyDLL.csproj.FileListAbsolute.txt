@@ -1,0 +1,4 @@
+Z:\VS Projects\MyDLL\MyDLL\bin\Debug\MyDLL.dll
+Z:\VS Projects\MyDLL\MyDLL\bin\Debug\MyDLL.pdb
+Z:\VS Projects\MyDLL\MyDLL\obj\Debug\MyDLL.csprojResolveAssemblyReference.cache
+Z:\VS Projects\MyDLL\MyDLL\obj\Debug\MyDLL.pdb

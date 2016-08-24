@@ -29,7 +29,7 @@ namespace Email
 
                 SmtpClient client = new SmtpClient("smtp.gmail.com", 587);//domain Path
                 client.EnableSsl = true;
-                client.Timeout = 1000000;
+                client.Timeout = 10000;
 
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;//Netword being used
                 client.UseDefaultCredentials = false;
@@ -37,13 +37,13 @@ namespace Email
 
                 MailMessage msg = new MailMessage();//Creating the message to send
                 msg.To.Add(Email);
-                msg.From = new MailAddress("kohlfaul@gmail.com");
+                msg.From = new MailAddress(Email);
                 msg.Subject = "Testing 1 2...";
                 msg.Body = "New password  = 00000";
                 client.Send(msg);
 
                 this.Hide();
-                MessageBox.Show("Email send with your new pasword details");
+                MessageBox.Show("Email sent with your new pasword details");
               
             }
             catch (Exception ex)

@@ -8,3 +8,12 @@ c:\users\kohl\documents\visual studio 2013\Projects\Email\Email\obj\Debug\Email.
 c:\users\kohl\documents\visual studio 2013\Projects\Email\Email\obj\Debug\Email.pdb
 c:\users\kohl\documents\visual studio 2013\Projects\Email\Email\obj\Debug\Email.FrmForgotPass.resources
 c:\users\kohl\documents\visual studio 2013\Projects\Email\Email\obj\Debug\Email.FrmLogin.resources
+C:\Users\Kohl\Documents\GitHub\WIL-Project-2016\ForgotPassword\Email\bin\Debug\Email.exe.config
+C:\Users\Kohl\Documents\GitHub\WIL-Project-2016\ForgotPassword\Email\obj\Debug\Email.exe
+C:\Users\Kohl\Documents\GitHub\WIL-Project-2016\ForgotPassword\Email\obj\Debug\Email.pdb
+C:\Users\Kohl\Documents\GitHub\WIL-Project-2016\ForgotPassword\Email\obj\Debug\Email.csprojResolveAssemblyReference.cache
+C:\Users\Kohl\Documents\GitHub\WIL-Project-2016\ForgotPassword\Email\bin\Debug\Email.exe
+C:\Users\Kohl\Documents\GitHub\WIL-Project-2016\ForgotPassword\Email\bin\Debug\Email.pdb
+C:\Users\Kohl\Documents\GitHub\WIL-Project-2016\ForgotPassword\Email\obj\Debug\Email.FrmForgotPass.resources
+C:\Users\Kohl\Documents\GitHub\WIL-Project-2016\ForgotPassword\Email\obj\Debug\Email.Properties.Resources.resources
+C:\Users\Kohl\Documents\GitHub\WIL-Project-2016\ForgotPassword\Email\obj\Debug\Email.csproj.GenerateResource.Cache

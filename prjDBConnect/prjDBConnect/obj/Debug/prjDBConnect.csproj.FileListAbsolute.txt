@@ -1,0 +1,8 @@
+C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjDBConnect\prjDBConnect\bin\Debug\prjDBConnect.exe.config
+C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjDBConnect\prjDBConnect\bin\Debug\prjDBConnect.exe
+C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjDBConnect\prjDBConnect\bin\Debug\prjDBConnect.pdb
+C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjDBConnect\prjDBConnect\obj\Debug\prjDBConnect.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjDBConnect\prjDBConnect\obj\Debug\prjDBConnect.Properties.Resources.resources
+C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjDBConnect\prjDBConnect\obj\Debug\prjDBConnect.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjDBConnect\prjDBConnect\obj\Debug\prjDBConnect.exe
+C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjDBConnect\prjDBConnect\obj\Debug\prjDBConnect.pdb

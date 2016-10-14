@@ -41,7 +41,7 @@ namespace prjWil
                 DBConnect objNewConnect = new DBConnect();
                 objNewConnect.OpenConnection();
                 //QUERY COMMAND
-                objNewConnect.sqlCmd = new SqlCommand("INSERT INTO TRIP VALUES (@PAY_AMOUNT,@EMPLOYEE_ID);", objNewConnect.sqlConn);
+                objNewConnect.sqlCmd = new SqlCommand("INSERT INTO RATES VALUES (@PAY_AMOUNT,@EMPLOYEE_ID);", objNewConnect.sqlConn);
                 objNewConnect.sqlCmd.Parameters.AddWithValue("@PAY_AMOUNT", txbPayAmt);
                 objNewConnect.sqlCmd.Parameters.AddWithValue("@EMPLOYEE_ID", txbEmpID);
 
@@ -57,6 +57,53 @@ namespace prjWil
             catch
             {
 
+            }
+        }
+
+        private void btnSearchEmp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DBConnect objPopulateCbo = new DBConnect();
+                objPopulateCbo.OpenConnection();
+                objPopulateCbo.sqlCmd = new SqlCommand("SELECT EMPLOYEE ID FROM RATES;", objPopulateCbo.sqlConn);
+                objPopulateCbo.sqlDR = objPopulateCbo.sqlCmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("EMPLOYEE_ID", typeof(string));
+                dt.Load(objPopulateCbo.sqlDR);
+
+                cmbEmpID.ValueMember = "EMPLOYEE_ID";
+                cmbEmpID.DisplayMember = "EMPLOYEE_ID";
+                cmbEmpID.DataSource = dt;
+                objPopulateCbo.sqlConn.Close();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void btnDeleteEmp_Click(object sender, EventArgs e)
+        {
+            int EMPLOYEE_ID = int.Parse(cmbRatesDelete.SelectedValue.ToString());
+            DBConnect objConnect = new DBConnect();
+            objConnect.OpenConnection();
+            try
+            {
+                objConnect.sqlCmd = new SqlCommand("DELETE FROM RATES WHERE (EMPLOYEE_ID =@EMPLOYEE_ID);", objConnect.sqlConn);
+                objConnect.sqlCmd.Parameters.AddWithValue("@EMPLOYEE_ID", EMPLOYEE_ID);
+
+                objConnect.sqlDR = objConnect.sqlCmd.ExecuteReader();
+                MessageBox.Show("SUCCESSFULLY DELETED RATES FROM DATABASE.");
+
+                objConnect.sqlDR.Close();
+                objConnect.sqlConn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Deletion unsuccessful." + ex.Message);
             }
         }
     }

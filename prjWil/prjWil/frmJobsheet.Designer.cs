@@ -33,7 +33,6 @@
             this.btnSearchJobRec = new System.Windows.Forms.Button();
             this.btnAddJobRec = new System.Windows.Forms.Button();
             this.pnlDeleteJob = new System.Windows.Forms.Panel();
-            this.txbEnterVehiNo = new System.Windows.Forms.TextBox();
             this.btnDeleteJob = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlSearchJob = new System.Windows.Forms.Panel();
@@ -56,6 +55,7 @@
             this.previousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmbJobsheetDelete = new System.Windows.Forms.ComboBox();
             this.pnlDeleteJob.SuspendLayout();
             this.pnlSearchJob.SuspendLayout();
             this.pnlAddJob.SuspendLayout();
@@ -104,7 +104,7 @@
             // pnlDeleteJob
             // 
             this.pnlDeleteJob.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlDeleteJob.Controls.Add(this.txbEnterVehiNo);
+            this.pnlDeleteJob.Controls.Add(this.cmbJobsheetDelete);
             this.pnlDeleteJob.Controls.Add(this.btnDeleteJob);
             this.pnlDeleteJob.Controls.Add(this.label2);
             this.pnlDeleteJob.Location = new System.Drawing.Point(372, 261);
@@ -114,13 +114,6 @@
             this.pnlDeleteJob.Visible = false;
             this.pnlDeleteJob.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDeleteJob_Paint);
             // 
-            // txbEnterVehiNo
-            // 
-            this.txbEnterVehiNo.Location = new System.Drawing.Point(21, 54);
-            this.txbEnterVehiNo.Name = "txbEnterVehiNo";
-            this.txbEnterVehiNo.Size = new System.Drawing.Size(100, 20);
-            this.txbEnterVehiNo.TabIndex = 2;
-            // 
             // btnDeleteJob
             // 
             this.btnDeleteJob.Location = new System.Drawing.Point(176, 52);
@@ -129,6 +122,7 @@
             this.btnDeleteJob.TabIndex = 1;
             this.btnDeleteJob.Text = "Delete";
             this.btnDeleteJob.UseVisualStyleBackColor = true;
+            this.btnDeleteJob.Click += new System.EventHandler(this.btnDeleteJob_Click);
             // 
             // label2
             // 
@@ -169,6 +163,7 @@
             this.btnSearchJob.TabIndex = 2;
             this.btnSearchJob.Text = "Search";
             this.btnSearchJob.UseVisualStyleBackColor = true;
+            this.btnSearchJob.Click += new System.EventHandler(this.btnSearchJob_Click);
             // 
             // cmbVehNo
             // 
@@ -318,6 +313,14 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // cmbJobsheetDelete
+            // 
+            this.cmbJobsheetDelete.FormattingEnabled = true;
+            this.cmbJobsheetDelete.Location = new System.Drawing.Point(33, 52);
+            this.cmbJobsheetDelete.Name = "cmbJobsheetDelete";
+            this.cmbJobsheetDelete.Size = new System.Drawing.Size(121, 21);
+            this.cmbJobsheetDelete.TabIndex = 2;
+            // 
             // frmJobsheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,7 +356,6 @@
         private System.Windows.Forms.Button btnSearchJobRec;
         private System.Windows.Forms.Button btnAddJobRec;
         private System.Windows.Forms.Panel pnlDeleteJob;
-        private System.Windows.Forms.TextBox txbEnterVehiNo;
         private System.Windows.Forms.Button btnDeleteJob;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlSearchJob;
@@ -376,5 +378,6 @@
         private System.Windows.Forms.ToolStripMenuItem previousToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cmbJobsheetDelete;
     }
 }

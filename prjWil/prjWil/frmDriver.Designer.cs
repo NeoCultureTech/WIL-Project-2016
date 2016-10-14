@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pnlDeleteDriver = new System.Windows.Forms.Panel();
-            this.txbEnterDriverID = new System.Windows.Forms.TextBox();
             this.btnDeleteDriver = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlSearchDriver = new System.Windows.Forms.Panel();
@@ -52,6 +51,7 @@
             this.previousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmbDriverDelete = new System.Windows.Forms.ComboBox();
             this.pnlDeleteDriver.SuspendLayout();
             this.pnlSearchDriver.SuspendLayout();
             this.pnlAddDriver.SuspendLayout();
@@ -61,7 +61,7 @@
             // pnlDeleteDriver
             // 
             this.pnlDeleteDriver.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlDeleteDriver.Controls.Add(this.txbEnterDriverID);
+            this.pnlDeleteDriver.Controls.Add(this.cmbDriverDelete);
             this.pnlDeleteDriver.Controls.Add(this.btnDeleteDriver);
             this.pnlDeleteDriver.Controls.Add(this.label2);
             this.pnlDeleteDriver.Location = new System.Drawing.Point(412, 234);
@@ -69,13 +69,6 @@
             this.pnlDeleteDriver.Size = new System.Drawing.Size(371, 168);
             this.pnlDeleteDriver.TabIndex = 19;
             this.pnlDeleteDriver.Visible = false;
-            // 
-            // txbEnterDriverID
-            // 
-            this.txbEnterDriverID.Location = new System.Drawing.Point(21, 54);
-            this.txbEnterDriverID.Name = "txbEnterDriverID";
-            this.txbEnterDriverID.Size = new System.Drawing.Size(100, 20);
-            this.txbEnterDriverID.TabIndex = 2;
             // 
             // btnDeleteDriver
             // 
@@ -85,6 +78,7 @@
             this.btnDeleteDriver.TabIndex = 1;
             this.btnDeleteDriver.Text = "Delete";
             this.btnDeleteDriver.UseVisualStyleBackColor = true;
+            this.btnDeleteDriver.Click += new System.EventHandler(this.btnDeleteDriver_Click);
             // 
             // label2
             // 
@@ -124,6 +118,7 @@
             this.btnSearchDriver.TabIndex = 2;
             this.btnSearchDriver.Text = "Search";
             this.btnSearchDriver.UseVisualStyleBackColor = true;
+            this.btnSearchDriver.Click += new System.EventHandler(this.btnSearchDriver_Click);
             // 
             // cmbDriverID
             // 
@@ -132,6 +127,7 @@
             this.cmbDriverID.Name = "cmbDriverID";
             this.cmbDriverID.Size = new System.Drawing.Size(121, 21);
             this.cmbDriverID.TabIndex = 1;
+            this.cmbDriverID.SelectedIndexChanged += new System.EventHandler(this.cmbDriverID_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -275,6 +271,14 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // cmbDriverDelete
+            // 
+            this.cmbDriverDelete.FormattingEnabled = true;
+            this.cmbDriverDelete.Location = new System.Drawing.Point(30, 54);
+            this.cmbDriverDelete.Name = "cmbDriverDelete";
+            this.cmbDriverDelete.Size = new System.Drawing.Size(121, 21);
+            this.cmbDriverDelete.TabIndex = 2;
+            // 
             // frmDriver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,7 +310,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlDeleteDriver;
-        private System.Windows.Forms.TextBox txbEnterDriverID;
         private System.Windows.Forms.Button btnDeleteDriver;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlSearchDriver;
@@ -329,5 +332,6 @@
         private System.Windows.Forms.ToolStripMenuItem previousToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cmbDriverDelete;
     }
 }

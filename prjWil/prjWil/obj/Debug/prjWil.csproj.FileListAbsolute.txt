@@ -19,19 +19,3 @@ F:\prjWil\prjWil\obj\Debug\prjWil.pdb
 Z:\prjWil\prjWil\bin\Debug\prjWil.exe.config
 Z:\prjWil\prjWil\obj\Debug\prjWil.exe
 Z:\prjWil\prjWil\obj\Debug\prjWil.pdb
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\bin\Debug\prjWil.exe.config
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\obj\Debug\prjWil.exe
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\obj\Debug\prjWil.pdb
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\obj\Debug\prjWil.csprojResolveAssemblyReference.cache
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\obj\Debug\prjWil.frmTrip.resources
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\obj\Debug\prjWil.frmAdminMenu.resources
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\obj\Debug\prjWil.frmDriver.resources
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\obj\Debug\prjWil.frmEmployee.resources
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\obj\Debug\prjWil.frmJobsheet.resources
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\obj\Debug\prjWil.frmRates.resources
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\obj\Debug\prjWil.frmService.resources
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\obj\Debug\prjWil.frmTimesheet.resources
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\obj\Debug\prjWil.Properties.Resources.resources
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\obj\Debug\prjWil.csproj.GenerateResource.Cache
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\bin\Debug\prjWil.exe
-C:\Users\user\Desktop\Daniel Hing\DANIEL - 2016\Semester 2\WIL 2016\prjWil\prjWil\bin\Debug\prjWil.pdb

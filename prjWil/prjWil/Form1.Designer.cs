@@ -52,7 +52,6 @@
             this.cmbTripID = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlDeleteTrip = new System.Windows.Forms.Panel();
-            this.txbEnterTripID = new System.Windows.Forms.TextBox();
             this.btnDeleteTrip = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -60,6 +59,7 @@
             this.previousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmbTripDelete = new System.Windows.Forms.ComboBox();
             this.pnlAddTrip.SuspendLayout();
             this.pnlSearchTrip.SuspendLayout();
             this.pnlDeleteTrip.SuspendLayout();
@@ -275,6 +275,7 @@
             this.cmbTripID.Name = "cmbTripID";
             this.cmbTripID.Size = new System.Drawing.Size(121, 21);
             this.cmbTripID.TabIndex = 1;
+            this.cmbTripID.SelectedIndexChanged += new System.EventHandler(this.cmbTripID_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -288,7 +289,7 @@
             // pnlDeleteTrip
             // 
             this.pnlDeleteTrip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlDeleteTrip.Controls.Add(this.txbEnterTripID);
+            this.pnlDeleteTrip.Controls.Add(this.cmbTripDelete);
             this.pnlDeleteTrip.Controls.Add(this.btnDeleteTrip);
             this.pnlDeleteTrip.Controls.Add(this.label2);
             this.pnlDeleteTrip.Location = new System.Drawing.Point(406, 229);
@@ -296,13 +297,6 @@
             this.pnlDeleteTrip.Size = new System.Drawing.Size(371, 168);
             this.pnlDeleteTrip.TabIndex = 6;
             this.pnlDeleteTrip.Visible = false;
-            // 
-            // txbEnterTripID
-            // 
-            this.txbEnterTripID.Location = new System.Drawing.Point(21, 54);
-            this.txbEnterTripID.Name = "txbEnterTripID";
-            this.txbEnterTripID.Size = new System.Drawing.Size(100, 20);
-            this.txbEnterTripID.TabIndex = 2;
             // 
             // btnDeleteTrip
             // 
@@ -361,6 +355,15 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // cmbTripDelete
+            // 
+            this.cmbTripDelete.FormattingEnabled = true;
+            this.cmbTripDelete.Location = new System.Drawing.Point(21, 52);
+            this.cmbTripDelete.Name = "cmbTripDelete";
+            this.cmbTripDelete.Size = new System.Drawing.Size(121, 21);
+            this.cmbTripDelete.TabIndex = 2;
+            this.cmbTripDelete.SelectedIndexChanged += new System.EventHandler(this.cmbTripDelete_SelectedIndexChanged);
+            // 
             // frmTrip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,7 +411,6 @@
         private System.Windows.Forms.ComboBox cmbTripID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlDeleteTrip;
-        private System.Windows.Forms.TextBox txbEnterTripID;
         private System.Windows.Forms.Button btnDeleteTrip;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbTripKm;
@@ -423,6 +425,7 @@
         private System.Windows.Forms.ToolStripMenuItem previousToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cmbTripDelete;
     }
 }
 

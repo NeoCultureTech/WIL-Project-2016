@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.pnlDeleteTime = new System.Windows.Forms.Panel();
-            this.txbEnterEmpID = new System.Windows.Forms.TextBox();
             this.btnDeleteTime = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlSearchTime = new System.Windows.Forms.Panel();
@@ -54,6 +53,7 @@
             this.previousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmbTimesheetDelete = new System.Windows.Forms.ComboBox();
             this.pnlDeleteTime.SuspendLayout();
             this.pnlSearchTime.SuspendLayout();
             this.pnlAddTime.SuspendLayout();
@@ -63,7 +63,7 @@
             // pnlDeleteTime
             // 
             this.pnlDeleteTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlDeleteTime.Controls.Add(this.txbEnterEmpID);
+            this.pnlDeleteTime.Controls.Add(this.cmbTimesheetDelete);
             this.pnlDeleteTime.Controls.Add(this.btnDeleteTime);
             this.pnlDeleteTime.Controls.Add(this.label2);
             this.pnlDeleteTime.Location = new System.Drawing.Point(406, 243);
@@ -71,13 +71,6 @@
             this.pnlDeleteTime.Size = new System.Drawing.Size(371, 168);
             this.pnlDeleteTime.TabIndex = 19;
             this.pnlDeleteTime.Visible = false;
-            // 
-            // txbEnterEmpID
-            // 
-            this.txbEnterEmpID.Location = new System.Drawing.Point(21, 54);
-            this.txbEnterEmpID.Name = "txbEnterEmpID";
-            this.txbEnterEmpID.Size = new System.Drawing.Size(100, 20);
-            this.txbEnterEmpID.TabIndex = 2;
             // 
             // btnDeleteTime
             // 
@@ -87,6 +80,7 @@
             this.btnDeleteTime.TabIndex = 1;
             this.btnDeleteTime.Text = "Delete";
             this.btnDeleteTime.UseVisualStyleBackColor = true;
+            this.btnDeleteTime.Click += new System.EventHandler(this.btnDeleteTime_Click);
             // 
             // label2
             // 
@@ -126,6 +120,7 @@
             this.btnSearchTime.TabIndex = 2;
             this.btnSearchTime.Text = "Search";
             this.btnSearchTime.UseVisualStyleBackColor = true;
+            this.btnSearchTime.Click += new System.EventHandler(this.btnSearchTime_Click);
             // 
             // cmbEmpID
             // 
@@ -296,6 +291,14 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // cmbTimesheetDelete
+            // 
+            this.cmbTimesheetDelete.FormattingEnabled = true;
+            this.cmbTimesheetDelete.Location = new System.Drawing.Point(32, 52);
+            this.cmbTimesheetDelete.Name = "cmbTimesheetDelete";
+            this.cmbTimesheetDelete.Size = new System.Drawing.Size(121, 21);
+            this.cmbTimesheetDelete.TabIndex = 2;
+            // 
             // frmTimesheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,7 +330,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlDeleteTime;
-        private System.Windows.Forms.TextBox txbEnterEmpID;
         private System.Windows.Forms.Button btnDeleteTime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlSearchTime;
@@ -352,6 +354,7 @@
         private System.Windows.Forms.ToolStripMenuItem previousToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cmbTimesheetDelete;
 
     }
 }

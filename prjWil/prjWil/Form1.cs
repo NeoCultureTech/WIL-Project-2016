@@ -40,7 +40,25 @@ namespace prjWil
 
         private void btnSearchTrip_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DBConnect objPopulateCbo = new DBConnect();
+                objPopulateCbo.OpenConnection();
+                objPopulateCbo.sqlCmd = new SqlCommand("SELECT Trip ID FROM Trip;", objPopulateCbo.sqlConn);
+                objPopulateCbo.sqlDR = objPopulateCbo.sqlCmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("TRIP_ID", typeof(string));
+                dt.Load(objPopulateCbo.sqlDR);
 
+                cmbTripID.ValueMember = "TRIP_ID";
+                cmbTripID.DisplayMember = "TRIP_ID";
+                cmbTripID.DataSource = dt;
+                objPopulateCbo.sqlConn.Close();
+            }
+            catch
+            {
+
+            }
         }
 
         private void btnAddTripRec_Click(object sender, EventArgs e)
@@ -91,7 +109,76 @@ namespace prjWil
 
         private void btnDeleteTrip_Click(object sender, EventArgs e)
         {
-           
+           int TRIP_ID = int.Parse(cmbTripDelete.SelectedValue.ToString());
+            DBConnect objConnect = new DBConnect();
+            objConnect.OpenConnection();
+            try
+            {
+                objConnect.sqlCmd = new SqlCommand("DELETE FROM TRIP WHERE (TRIP_ID =@TRIP_ID);", objConnect.sqlConn);
+                objConnect.sqlCmd.Parameters.AddWithValue("@TRIP_ID", TRIP_ID);
+
+                objConnect.sqlDR = objConnect.sqlCmd.ExecuteReader();
+                MessageBox.Show("SUCCESSFULLY DELETED TRIP FROM DATABASE.");
+
+                objConnect.sqlDR.Close();
+                objConnect.sqlConn.Close();
+               
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Deletion unsuccessful." + ex.Message);
+            }
+        }
+
+        private void cmbTripDelete_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DBConnect objPopulateCbo = new DBConnect();
+                objPopulateCbo.OpenConnection();
+                objPopulateCbo.sqlCmd = new SqlCommand("SELECT Distinct TRIP_ID FROM TRIP;", objPopulateCbo.sqlConn);
+                objPopulateCbo.sqlDR = objPopulateCbo.sqlCmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("TRIP_ID", typeof(string));
+                dt.Load(objPopulateCbo.sqlDR);
+
+                cmbTripDelete.ValueMember = "TRIP_ID";
+                cmbTripDelete.DisplayMember = "TRIP_ID";
+                cmbTripDelete.DataSource = dt;
+
+                objPopulateCbo.sqlConn.Close();
+            }
+
+            catch
+            {
+
+            }
+        }
+
+        private void cmbTripID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DBConnect objPopulateCbo = new DBConnect();
+                objPopulateCbo.OpenConnection();
+                objPopulateCbo.sqlCmd = new SqlCommand("SELECT Distinct TRIP_ID FROM TRIP;", objPopulateCbo.sqlConn);
+                objPopulateCbo.sqlDR = objPopulateCbo.sqlCmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("TRIP_ID", typeof(string));
+                dt.Load(objPopulateCbo.sqlDR);
+
+                cmbTripDelete.ValueMember = "TRIP_ID";
+                cmbTripDelete.DisplayMember = "TRIP_ID";
+                cmbTripDelete.DataSource = dt;
+
+                objPopulateCbo.sqlConn.Close();
+            }
+
+            catch
+            {
+
+            }
         }
     }
     }

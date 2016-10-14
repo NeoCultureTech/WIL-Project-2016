@@ -46,7 +46,6 @@
             this.cmbVehNo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlDeleteService = new System.Windows.Forms.Panel();
-            this.txbEnterVehNo = new System.Windows.Forms.TextBox();
             this.btnDeleteService = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblSelect = new System.Windows.Forms.Label();
@@ -58,6 +57,7 @@
             this.previousToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmbServiceDelete = new System.Windows.Forms.ComboBox();
             this.pnlAddService.SuspendLayout();
             this.pnlSearchService.SuspendLayout();
             this.pnlDeleteService.SuspendLayout();
@@ -203,6 +203,7 @@
             this.btnSearchService.TabIndex = 2;
             this.btnSearchService.Text = "Search";
             this.btnSearchService.UseVisualStyleBackColor = true;
+            this.btnSearchService.Click += new System.EventHandler(this.btnSearchService_Click);
             // 
             // cmbVehNo
             // 
@@ -224,7 +225,7 @@
             // pnlDeleteService
             // 
             this.pnlDeleteService.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlDeleteService.Controls.Add(this.txbEnterVehNo);
+            this.pnlDeleteService.Controls.Add(this.cmbServiceDelete);
             this.pnlDeleteService.Controls.Add(this.btnDeleteService);
             this.pnlDeleteService.Controls.Add(this.label2);
             this.pnlDeleteService.Location = new System.Drawing.Point(395, 239);
@@ -232,13 +233,6 @@
             this.pnlDeleteService.Size = new System.Drawing.Size(371, 168);
             this.pnlDeleteService.TabIndex = 7;
             this.pnlDeleteService.Visible = false;
-            // 
-            // txbEnterVehNo
-            // 
-            this.txbEnterVehNo.Location = new System.Drawing.Point(21, 54);
-            this.txbEnterVehNo.Name = "txbEnterVehNo";
-            this.txbEnterVehNo.Size = new System.Drawing.Size(100, 20);
-            this.txbEnterVehNo.TabIndex = 2;
             // 
             // btnDeleteService
             // 
@@ -248,6 +242,7 @@
             this.btnDeleteService.TabIndex = 1;
             this.btnDeleteService.Text = "Delete";
             this.btnDeleteService.UseVisualStyleBackColor = true;
+            this.btnDeleteService.Click += new System.EventHandler(this.btnDeleteService_Click);
             // 
             // label2
             // 
@@ -335,6 +330,14 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // cmbServiceDelete
+            // 
+            this.cmbServiceDelete.FormattingEnabled = true;
+            this.cmbServiceDelete.Location = new System.Drawing.Point(35, 54);
+            this.cmbServiceDelete.Name = "cmbServiceDelete";
+            this.cmbServiceDelete.Size = new System.Drawing.Size(121, 21);
+            this.cmbServiceDelete.TabIndex = 2;
+            // 
             // frmService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,7 +386,6 @@
         private System.Windows.Forms.ComboBox cmbVehNo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlDeleteService;
-        private System.Windows.Forms.TextBox txbEnterVehNo;
         private System.Windows.Forms.Button btnDeleteService;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblSelect;
@@ -395,5 +397,6 @@
         private System.Windows.Forms.ToolStripMenuItem previousToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cmbServiceDelete;
     }
 }

@@ -56,7 +56,7 @@ namespace prjWil
                 DBConnect objNewConnect = new DBConnect();
                 objNewConnect.OpenConnection();
                 //QUERY COMMAND
-                objNewConnect.sqlCmd = new SqlCommand("INSERT INTO TRIP VALUES (@VEHICLE_NO,@SERVICE_TYPE,@APPOINTMENT_TIME,@WORK_TBC);", objNewConnect.sqlConn);
+                objNewConnect.sqlCmd = new SqlCommand("INSERT INTO JOBSHEET VALUES (@VEHICLE_NO,@SERVICE_TYPE,@APPOINTMENT_TIME,@WORK_TBC);", objNewConnect.sqlConn);
                 objNewConnect.sqlCmd.Parameters.AddWithValue("@VEHICLE_NO", txbVehiNo);
                 objNewConnect.sqlCmd.Parameters.AddWithValue("@SERVICE_TYPE", txbServType);
                 objNewConnect.sqlCmd.Parameters.AddWithValue("@APPOINTMENT_TIME", txbAppointTime);
@@ -73,6 +73,53 @@ namespace prjWil
             catch
             {
 
+            }
+        }
+
+        private void btnSearchJob_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DBConnect objPopulateCbo = new DBConnect();
+                objPopulateCbo.OpenConnection();
+                objPopulateCbo.sqlCmd = new SqlCommand("SELECT VEHICLE NO FROM JOBSHEET;", objPopulateCbo.sqlConn);
+                objPopulateCbo.sqlDR = objPopulateCbo.sqlCmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("VEHICLE_NO", typeof(string));
+                dt.Load(objPopulateCbo.sqlDR);
+
+                cmbVehNo.ValueMember = "VEHICLE_NO";
+                cmbVehNo.DisplayMember = "VEHICLE_NO";
+                cmbVehNo.DataSource = dt;
+                objPopulateCbo.sqlConn.Close();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void btnDeleteJob_Click(object sender, EventArgs e)
+        {
+            int VEHICLE_NO = int.Parse(cmbJobsheetDelete.SelectedValue.ToString());
+            DBConnect objConnect = new DBConnect();
+            objConnect.OpenConnection();
+            try
+            {
+                objConnect.sqlCmd = new SqlCommand("DELETE FROM JOBSHEET WHERE (VEHICLE_NO =@VEHICLE_NO);", objConnect.sqlConn);
+                objConnect.sqlCmd.Parameters.AddWithValue("@VEHICLE_NO", VEHICLE_NO);
+
+                objConnect.sqlDR = objConnect.sqlCmd.ExecuteReader();
+                MessageBox.Show("SUCCESSFULLY DELETED JOBSHEET FROM DATABASE.");
+
+                objConnect.sqlDR.Close();
+                objConnect.sqlConn.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Deletion unsuccessful." + ex.Message);
             }
         }
     }
